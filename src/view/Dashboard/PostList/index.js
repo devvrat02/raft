@@ -5,10 +5,10 @@ import { useSelector } from "react-redux";
 function PostList({page=''}) {
     const {uid,follow,updater}=useSelector((state)=>state.auth)
     const [Post,setPost]=useState([])
-    const db = getDatabase();
-    const dbRef = ref(db, 'posts');
     useEffect(()=>{
         let data=[];
+        const db = getDatabase();
+        const dbRef = ref(db, 'posts');
         onValue(dbRef, (snapshot) => {
             snapshot.forEach((childSnapshot) => {
                 const childData = childSnapshot.val();
@@ -31,7 +31,7 @@ function PostList({page=''}) {
             onlyOnce: true
         });  
         return (()=>{
-            setPost([...Post])
+            setPost(P=>[...P])
         })
         
     },[page,updater,follow,uid])
