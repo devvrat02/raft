@@ -1,3 +1,7 @@
+*{
+  font-family: 'Times New Roman', Times, serif;
+  background:'#f2f2f2'
+}
 .App {
   text-align: center;
 }
@@ -28,6 +32,7 @@
   color: #61dafb;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +40,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.ant-btn-primary {
+  background-color: #13c2c2;
+  border-color: #13c2c2;
+}
+
+.ant-btn-primary:hover {
+  background-color: #08979c;
+  border-color: #08979c;
 }
