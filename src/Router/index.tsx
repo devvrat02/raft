@@ -18,7 +18,7 @@ function Router() {
     })
     useEffect(()=>{
     const token:any = localStorage.getItem('token')
-    if ((token&&!isLogged)||name==='') {
+    if (token&&(!isLogged&&name==='')) {
       let user=JSON.parse(token)
       const dbRef = ref(getDatabase());
       get(child(dbRef, `users/${user.uid}`)).then((snapshot) => {
