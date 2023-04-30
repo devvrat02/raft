@@ -17,7 +17,7 @@ function PostList({page=''}) {
                     data.unshift(childData)
                     setPost([...data])
                 }
-                if(page==='all'&&uid!==childData.userId){
+                if(page==='all'){
                     data.unshift(childData)
                     setPost([...data])
                 }
@@ -31,7 +31,7 @@ function PostList({page=''}) {
             onlyOnce: true
         });  
         return (()=>{
-            setPost(P=>[...P])
+            setPost([])
         })
         
     },[page,updater,follow,uid])
